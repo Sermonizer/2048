@@ -1,0 +1,68 @@
+/* UI层 */
+header {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+
+    text-align: center;
+}
+
+header h1 {
+    font: 45px bold arial, sans-serif;
+}
+
+header #newGameButton {
+    display: block;
+    
+    margin: 10px auto;
+    width: 100px;
+    padding: 10px 10px;
+ 
+    font-family: arial, sans-serif;
+    /* 圆角 */
+    border-radius: 10px;
+    text-decoration: none;
+
+    color: white;
+    background-color: burlywood;  
+}
+
+header #newGameButton:hover {
+    background-color: wheat;
+}
+
+header p {
+    margin: 20px auto;
+    font: 25px arial, sans-serif;   
+}
+
+/* 给4*4棋盘赋值，长宽500px，内间距20px */
+#gridContainer {
+    position: relative;
+
+    width: 460px;
+    height: 460px;
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+
+    background-color: #bbada0;
+}
+
+.gridCell {
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background-color: #ccc0b3;
+}
+
+.numberCell {
+    position: absolute;
+
+    font: 60px arial bold;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 6px;
+}
