@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-07-14 22:40:44
- * @LastEditTime: 2020-08-11 09:21:54
- * @LastEditors: your name
+ * @LastEditTime: 2020-08-11 11:50:33
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \2048-master\showanimation.js
  */
@@ -39,6 +39,7 @@ function showMoveAnimation(fromx, fromy, tox, toy) {
   );
 }
 
+// 得分更新
 function updateScore(score) {
   $("#score").text(score);
 }

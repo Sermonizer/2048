@@ -157,13 +157,13 @@ function moveLeft() {
   if (!canMoveLeft(board)) {
     return false;
   }
-  // 往左边移动，最左边的已无法移动
   for (var i = 0; i < 4; i++) {
+    // 往左边移动，最左边的已无法移动
     for (var j = 1; j < 4; j++) {
       // 如果不等于0，判断是否可以左移
       if (board[i][j] != 0) {
         for (var k = 0; k < j; k++) {
-          // 1.左边有空可以移动
+          // 1.左边有空可以移动并且当前位置和能移动的位置间没有阻碍
           if (board[i][k] == 0 && noBlockHorizontal(i, k, j, board)) {
             // move动画
             showMoveAnimation(i, j, i, k);
@@ -175,6 +175,7 @@ function moveLeft() {
           else if (
             board[i][k] == board[i][j] &&
             noBlockHorizontal(i, k, j, board) &&
+            // i,k处的值在当前渲染没被改变过
             !hasChanged[i][k]
           ) {
             // move
