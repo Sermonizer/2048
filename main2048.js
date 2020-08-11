@@ -152,7 +152,7 @@ $(document).keydown(function (event) {
       break;
   }
 });
-
+// 按下左键的逻辑
 function moveLeft() {
   if (!canMoveLeft(board)) {
     return false;
