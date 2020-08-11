@@ -8,6 +8,7 @@ function getPosLeft(i, j) {
   return 20 + j * 120;
 }
 
+// 数值不同，颜色不同
 function getNumberBackColor(number) {
   switch (number) {
     case 2:
@@ -130,7 +131,7 @@ function canMoveDown(board) {
   return false;
 }
 
-// 水平没有阻碍
+// col1和col2之间水平没有阻碍
 function noBlockHorizontal(row, col1, col2, board) {
   for (var i = col1 + 1; i < col2; i++) {
     if (board[row][i] != 0) {
@@ -140,7 +141,7 @@ function noBlockHorizontal(row, col1, col2, board) {
   return true;
 }
 
-// 垂直没有阻碍
+// row1和row2之间垂直没有阻碍
 function noBlockVertical(row1, row2, col, board) {
   for (var i = row1 + 1; i < row2; i++) {
     if (board[i][col] != 0) {
